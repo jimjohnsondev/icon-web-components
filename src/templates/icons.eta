@@ -1,0 +1,13 @@
+<% it.data.forEach(function(el){ %>
+  import { Icon<%= el.className %> } from './icons/Icon<%= el.className %>';
+<% }) %>
+
+<% it.data.forEach(function(el){ %>
+  export const defineIcon<%= el.className %> = () => customElements.define('icon-<%= el.name %>', Icon<%= el.className %>);
+<% }) %>
+
+export const defineAllIcons = () => {
+  <% it.data.forEach(function(el){ %>
+    customElements.define('icon-<%= el.name %>', Icon<%= el.className %>);
+  <% }) %>
+};

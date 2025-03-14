@@ -6,9 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:icons": "node ./scripts/build.js && prettier --write ./src",
+    "preview": "vite preview",
+    "format": "prettier --write ./src",
+    "lint": "eslint ./src",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
   },
   "devDependencies": {
-    "vite": "^6.2.0"
+    "@vitest/coverage-v8": "^3.0.8",
+    "eslint": "^9.22.0",
+    "eta": "^3.5.0",
+    "prettier": "^3.5.3"
   }
 }

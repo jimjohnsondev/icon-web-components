@@ -5,20 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SVG Icon Web Components</title>
-  <script src="/src/IconAtom.js"></script>
-  <style>
-    .icon {
-      display: block;
-      stroke: red;
-      fill: none;
-      width: 32px;
-      height: 32px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/src/icons.js" type="module"></script>
+  <script type="module">
+    import { defineAllIcons } from '/src/icons.js';
+    defineAllIcons();
+  </script>
 </head>
 
 <body>
-  <icon-atom class="icon" />
+  <main class="icon-grid">
+          <icon-arrow-right-alt></icon-arrow-right-alt>
+          <icon-caret-down></icon-caret-down>
+          <icon-caret-left></icon-caret-left>
+          <icon-caret-right></icon-caret-right>
+          <icon-caret-sort></icon-caret-sort>
+          <icon-caret-up></icon-caret-up>
+          <icon-forward></icon-forward>
+          <icon-reply-all></icon-reply-all>
+          <icon-reply></icon-reply>
+          <icon-share-all></icon-share-all>
+      </main>
 </body>
 
 </html>
