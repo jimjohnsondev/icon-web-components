@@ -1,5 +1,5 @@
 export class IconCaretUp extends HTMLElement {
-  static observedAttributes = ["stroke", "fill", "width", "height", "class"];
+  static observedAttributes = ['stroke', 'fill', 'width', 'height', 'class'];
 
   #svgEl;
 
@@ -13,23 +13,23 @@ export class IconCaretUp extends HTMLElement {
 </svg>
 `;
 
-    const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: 'open' });
     shadow.innerHTML = svg;
-    this.#svgEl = this.shadowRoot.querySelector("svg");
+    this.#svgEl = this.shadowRoot.querySelector('svg');
 
-    CaretUp.observedAttributes.forEach((key) =>
+    IconCaretUp.observedAttributes.forEach((key) =>
       this.#setSvgAttribute(key, this.getAttribute(key)),
     );
-    if (this.getAttribute("class")) {
+    if (this.getAttribute('class')) {
       this.#clearAttributesForStyling();
     }
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "class") {
+    if (name === 'class') {
       this.#clearAttributesForStyling();
     }
-    this.setSvgAttribute(name, newValue);
+    this.#setSvgAttribute(name, newValue);
   }
 
   #setSvgAttribute(key, value) {
@@ -39,8 +39,9 @@ export class IconCaretUp extends HTMLElement {
   }
 
   #clearAttributesForStyling() {
-    CaretUp.observedAttributes
-      .filter((key) => key !== "class")
-      .forEach((key) => this.#svgEl.setAttribute(key, undefined));
+    if (!this.#svgEl) return;
+    IconCaretUp.observedAttributes
+      .filter((key) => key !== 'class')
+      .forEach((key) => this.#svgEl.removeAttribute(key));
   }
 }

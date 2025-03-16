@@ -5,10 +5,10 @@ const stripExtension = (filename) => filename.split('.')?.[0] ?? '';
 const toTitleCase = (str) => {
   if (!str) return '';
 
-  return str.toLowerCase()
+  return str
+    .toLowerCase()
     .split('-')
-    .map((word) => `${word.charAt(0)
-      .toUpperCase()}${word.slice(1)}`)
+    .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
     .join('');
 };
 
@@ -16,7 +16,7 @@ const svgFiles = await fs.readdir('./src/templates/assets');
 const data = svgFiles.map((v) => ({
   name: stripExtension(v),
   svg: `./assets/${v}`,
-  className: toTitleCase(stripExtension(v))
+  className: toTitleCase(stripExtension(v)),
 }));
 
 // Build icon classes

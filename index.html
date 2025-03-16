@@ -1,31 +1,80 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Icon Web Components</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/src/icons.js" type="module"></script>
+    <script type="module">
+      import { defineAllIcons } from '/src/icons.js';
+      defineAllIcons();
+    </script>
+    <script src="/src/index.test.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SVG Icon Web Components</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="/src/icons.js" type="module"></script>
-  <script type="module">
-    import { defineAllIcons } from '/src/icons.js';
-    defineAllIcons();
-  </script>
-</head>
-
-<body>
-  <main class="icon-grid">
-          <icon-arrow-right-alt></icon-arrow-right-alt>
-          <icon-caret-down></icon-caret-down>
-          <icon-caret-left></icon-caret-left>
-          <icon-caret-right></icon-caret-right>
-          <icon-caret-sort></icon-caret-sort>
-          <icon-caret-up></icon-caret-up>
-          <icon-forward></icon-forward>
-          <icon-reply-all></icon-reply-all>
-          <icon-reply></icon-reply>
-          <icon-share-all></icon-share-all>
-      </main>
-</body>
-
+  <body>
+    <h1>Web Component Icons</h1>
+    <main class="icon-grid">
+      <div class="icon-cell">
+        <icon-arrow-right-alt></icon-arrow-right-alt>
+      </div>
+      <div class="icon-cell">
+        <icon-caret-down></icon-caret-down>
+      </div>
+      <div class="icon-cell">
+        <icon-caret-left></icon-caret-left>
+      </div>
+      <div class="icon-cell">
+        <icon-caret-right></icon-caret-right>
+      </div>
+      <div class="icon-cell">
+        <icon-caret-sort></icon-caret-sort>
+      </div>
+      <div class="icon-cell">
+        <icon-caret-up></icon-caret-up>
+      </div>
+      <div class="icon-cell">
+        <icon-forward></icon-forward>
+      </div>
+      <div class="icon-cell">
+        <icon-reply-all></icon-reply-all>
+      </div>
+      <div class="icon-cell">
+        <icon-reply></icon-reply>
+      </div>
+      <div class="icon-cell">
+        <icon-share-all></icon-share-all>
+      </div>
+    </main>
+    <aside>
+      <h2>Icon Visual Tests</h2>
+      <div>
+        <h3>Icon renders with default props</h3>
+        <icon-share-all id="render"></icon-share-all>
+        <p id="render-output"></p>
+      </div>
+      <div>
+        <h3>Icon renders with custom props</h3>
+        <icon-share-all
+          id="properties"
+          width="32px"
+          height="32px"
+          fill="#000"
+          stroke="none"
+        ></icon-share-all>
+        <p id="properties-output"></p>
+      </div>
+      <div>
+        <h3>Icon renders with class styling</h3>
+        <icon-share-all id="class" class="icon"></icon-share-all>
+        <p id="class-output"></p>
+      </div>
+      <div>
+        <h3>Icon renders with JS styling</h3>
+        <icon-share-all id="js"></icon-share-all>
+        <p id="js-output"></p>
+      </div>
+    </aside>
+  </body>
 </html>

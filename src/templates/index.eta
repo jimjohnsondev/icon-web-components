@@ -11,14 +11,52 @@
     import { defineAllIcons } from '/src/icons.js';
     defineAllIcons();
   </script>
+  <script src="/src/index.test.js"></script>
 </head>
 
 <body>
+  <h1>Web Component Icons</h1>
   <main class="icon-grid">
     <% it.data.forEach(function(el){ %>
-      <icon-<%= el.name %>></icon-<%= el.name %>>
+      <div class="icon-cell">
+        <icon-<%= el.name %>></icon-<%= el.name %>>
+      </div>
     <% }) %>
   </main>
+  <aside>
+    <h2>Icon Visual Tests</h2>
+    <div>
+      <h3>Icon renders with default props</h3>
+      <icon-share-all id="render"></icon-share-all>
+      <p id="render-output"></p>
+    </div>
+    <div>
+      <h3>Icon renders with custom props</h3>
+      <icon-share-all
+        id="properties"
+        width="32px"
+        height="32px"
+        fill="#000"
+        stroke="none"
+      ></icon-share-all>
+      <p id="properties-output"></p>
+    </div>
+    <div>
+    <h3>Icon renders with class styling</h3>
+      <icon-share-all
+        id="class"
+        class="icon"
+      ></icon-share-all>
+      <p id="class-output"></p>
+    </div>
+    <div>
+    <h3>Icon renders with JS styling</h3>
+      <icon-share-all
+        id="js"
+      ></icon-share-all>
+      <p id="js-output"></p>
+    </div>
+  </aside>
 </body>
 
 </html>
