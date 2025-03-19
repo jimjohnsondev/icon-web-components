@@ -33,7 +33,7 @@ data.forEach(async ({ name, svg, className }) => {
 
 // Build import library
 const importRes = await eta.renderAsync('./icons', { data });
-await fs.writeFile(`./src/icons.js`, importRes);
+await fs.writeFile(`./src/index.js`, importRes);
 
 // Build html preview
 const htmlRes = await eta.renderAsync('./index', { data });

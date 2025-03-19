@@ -1,19 +1,37 @@
 {
-  "name": "icons",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@jjohnson/icon-web-components",
+  "description": "An SVG icon web component libary",
+  "keywords": [
+    "web coponent",
+    "custom element",
+    "icon",
+    "SVG"
+  ],
+  "license": "MIT",
+  "author": "Jim Johnson <jim@jimjohnson.dev>",
+  "homepage": "https://github.com/jimjohnsondev/icon-web-components",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:icons": "node ./scripts/build.js && npm run format",
+    "build": "npm run clean && npm run build:icons && npm run format && vite build",
+    "build:icons": "node ./scripts/build.js",
+    "clean": "rimraf ./src/icons/* -rf",
     "preview": "vite preview",
+    "prepublishOnly": "npm run build",
     "format": "prettier --write ./",
     "lint": "eslint ./src"
   },
   "devDependencies": {
     "eslint": "^9.22.0",
     "eta": "^3.5.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "vite": "^6.2.2"
   }
 }

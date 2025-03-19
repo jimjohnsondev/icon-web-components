@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SVG Icon Web Components</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/src/icons.js" type="module"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="/src/index.js" type="module"></script>
     <script type="module">
-      import { defineAllIcons } from '/src/icons.js';
+      import { defineAllIcons } from '/src/index.js';
       defineAllIcons();
     </script>
     <script src="/src/index.test.js"></script>
@@ -17,62 +17,56 @@
     <h1>Web Component Icons</h1>
     <main class="icon-grid">
       <div class="icon-cell">
-        <icon-arrow-right-alt></icon-arrow-right-alt>
+        <icon-angle-down></icon-angle-down>
       </div>
       <div class="icon-cell">
-        <icon-caret-down></icon-caret-down>
+        <icon-angle-left></icon-angle-left>
       </div>
       <div class="icon-cell">
-        <icon-caret-left></icon-caret-left>
+        <icon-angle-right></icon-angle-right>
       </div>
       <div class="icon-cell">
-        <icon-caret-right></icon-caret-right>
+        <icon-angle-up></icon-angle-up>
       </div>
       <div class="icon-cell">
-        <icon-caret-sort></icon-caret-sort>
+        <icon-bars></icon-bars>
       </div>
       <div class="icon-cell">
-        <icon-caret-up></icon-caret-up>
+        <icon-close></icon-close>
       </div>
       <div class="icon-cell">
-        <icon-forward></icon-forward>
+        <icon-github></icon-github>
       </div>
       <div class="icon-cell">
-        <icon-reply-all></icon-reply-all>
-      </div>
-      <div class="icon-cell">
-        <icon-reply></icon-reply>
-      </div>
-      <div class="icon-cell">
-        <icon-share-all></icon-share-all>
+        <icon-linkedin></icon-linkedin>
       </div>
     </main>
     <aside>
       <h2>Icon Visual Tests</h2>
       <div>
         <h3>Icon renders with default props</h3>
-        <icon-share-all id="render"></icon-share-all>
+        <icon-github id="render"></icon-github>
         <p id="render-output"></p>
       </div>
       <div>
         <h3>Icon renders with custom props</h3>
-        <icon-share-all
+        <icon-github
           id="properties"
           width="32px"
           height="32px"
           fill="#000"
           stroke="none"
-        ></icon-share-all>
+        ></icon-github>
         <p id="properties-output"></p>
       </div>
       <div>
         <h3>Icon renders with class styling</h3>
-        <icon-share-all id="class" class="icon"></icon-share-all>
+        <icon-github id="class" class="icon"></icon-github>
         <p id="class-output"></p>
       </div>
       <div>
         <h3>Icon renders with JS styling</h3>
-        <icon-share-all id="js"></icon-share-all>
+        <icon-github id="js"></icon-github>
         <p id="js-output"></p>
       </div>
     </aside>

@@ -1,4 +1,4 @@
-export class IconReply extends HTMLElement {
+export class IconAngleRight extends HTMLElement {
   static observedAttributes = ['stroke', 'fill', 'width', 'height', 'class'];
 
   #svgEl;
@@ -8,8 +8,8 @@ export class IconReply extends HTMLElement {
   }
 
   connectedCallback() {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-  <path d="M14.502 7.046h-2.5v-.928a2.122 2.122 0 0 0-1.199-1.954 1.827 1.827 0 0 0-1.984.311L3.71 8.965a2.2 2.2 0 0 0 0 3.24L8.82 16.7a1.829 1.829 0 0 0 1.985.31 2.121 2.121 0 0 0 1.199-1.959v-.928h1a2.025 2.025 0 0 1 1.999 2.047V19a1 1 0 0 0 1.275.961 6.59 6.59 0 0 0 4.662-7.22 6.593 6.593 0 0 0-6.437-5.695Z"/>
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
 </svg>
 `;
 
@@ -17,7 +17,7 @@ export class IconReply extends HTMLElement {
     shadow.innerHTML = svg;
     this.#svgEl = this.shadowRoot.querySelector('svg');
 
-    IconReply.observedAttributes.forEach((key) =>
+    IconAngleRight.observedAttributes.forEach((key) =>
       this.#setSvgAttribute(key, this.getAttribute(key)),
     );
     if (this.getAttribute('class')) {
@@ -40,7 +40,7 @@ export class IconReply extends HTMLElement {
 
   #clearAttributesForStyling() {
     if (!this.#svgEl) return;
-    IconReply.observedAttributes
+    IconAngleRight.observedAttributes
       .filter((key) => key !== 'class')
       .forEach((key) => this.#svgEl.removeAttribute(key));
   }

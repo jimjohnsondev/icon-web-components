@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SVG Icon Web Components</title>
-  <link rel="stylesheet" href="/styles.css" />
-  <script src="/src/icons.js" type="module"></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="/src/index.js" type="module"></script>
   <script type="module">
-    import { defineAllIcons } from '/src/icons.js';
+    import { defineAllIcons } from '/src/index.js';
     defineAllIcons();
   </script>
   <script src="/src/index.test.js"></script>
@@ -27,33 +27,33 @@
     <h2>Icon Visual Tests</h2>
     <div>
       <h3>Icon renders with default props</h3>
-      <icon-share-all id="render"></icon-share-all>
+      <icon-github id="render"></icon-github>
       <p id="render-output"></p>
     </div>
     <div>
       <h3>Icon renders with custom props</h3>
-      <icon-share-all
+      <icon-github
         id="properties"
         width="32px"
         height="32px"
         fill="#000"
         stroke="none"
-      ></icon-share-all>
+      ></icon-github>
       <p id="properties-output"></p>
     </div>
     <div>
     <h3>Icon renders with class styling</h3>
-      <icon-share-all
+      <icon-github
         id="class"
         class="icon"
-      ></icon-share-all>
+      ></icon-github>
       <p id="class-output"></p>
     </div>
     <div>
     <h3>Icon renders with JS styling</h3>
-      <icon-share-all
+      <icon-github
         id="js"
-      ></icon-share-all>
+      ></icon-github>
       <p id="js-output"></p>
     </div>
   </aside>

@@ -1,4 +1,4 @@
-export class IconCaretDown extends HTMLElement {
+export class IconAngleLeft extends HTMLElement {
   static observedAttributes = ['stroke', 'fill', 'width', 'height', 'class'];
 
   #svgEl;
@@ -8,8 +8,8 @@ export class IconCaretDown extends HTMLElement {
   }
 
   connectedCallback() {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-  <path fill-rule="evenodd" d="M18.425 10.271C19.499 8.967 18.57 7 16.88 7H7.12c-1.69 0-2.618 1.967-1.544 3.271l4.881 5.927a2 2 0 0 0 3.088 0l4.88-5.927Z" clip-rule="evenodd"/>
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
 </svg>
 `;
 
@@ -17,7 +17,7 @@ export class IconCaretDown extends HTMLElement {
     shadow.innerHTML = svg;
     this.#svgEl = this.shadowRoot.querySelector('svg');
 
-    IconCaretDown.observedAttributes.forEach((key) =>
+    IconAngleLeft.observedAttributes.forEach((key) =>
       this.#setSvgAttribute(key, this.getAttribute(key)),
     );
     if (this.getAttribute('class')) {
@@ -40,7 +40,7 @@ export class IconCaretDown extends HTMLElement {
 
   #clearAttributesForStyling() {
     if (!this.#svgEl) return;
-    IconCaretDown.observedAttributes
+    IconAngleLeft.observedAttributes
       .filter((key) => key !== 'class')
       .forEach((key) => this.#svgEl.removeAttribute(key));
   }
