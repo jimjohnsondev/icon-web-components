@@ -34,3 +34,7 @@ export const defineAllIcons = () => {
   customElements.define('icon-github', IconGithub);
   customElements.define('icon-linkedin', IconLinkedin);
 };
+
+export const defineCustomIcon = (name, className) => {
+  customElements.define(name, className);
+};

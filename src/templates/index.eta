@@ -20,6 +20,7 @@
     <% it.data.forEach(function(el){ %>
       <div class="icon-cell">
         <icon-<%= el.name %>></icon-<%= el.name %>>
+        <pre class="icon-code"><code>&lt;icon-<%= el.name %>&gt;&lt;/icon-<%= el.name %>&gt;</code></pre>
       </div>
     <% }) %>
   </main>

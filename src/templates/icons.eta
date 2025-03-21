@@ -11,3 +11,7 @@ export const defineAllIcons = () => {
     customElements.define('icon-<%= el.name %>', Icon<%= el.className %>);
   <% }) %>
 };
+
+export const defineCustomIcon = (name, className) => {
+  customElements.define(name, className);
+};
