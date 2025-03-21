@@ -11,7 +11,7 @@
   "author": "Jim Johnson <jim@jimjohnson.dev>",
   "homepage": "https://github.com/jimjohnsondev/icon-web-components",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.5.0",
   "type": "module",
   "main": "./dist/index.js",
   "files": [
