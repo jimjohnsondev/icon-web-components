@@ -1,6 +1,7 @@
 # SVG Icon Web Components
 
-<a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
+<img src="https://img.shields.io/badge/version-1.0.0-blue">
+<a href="license.txt"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
 
 A selection of svg icons for use in plain vanilla JS projects. This project is under heavy development and not yet ready for use.
 
