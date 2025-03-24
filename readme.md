@@ -1,8 +1,8 @@
 # SVG Icon Web Components
 
-<a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
+<img src="https://img.shields.io/badge/version-1.0.1-blue"> <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
 
-A selection of svg icons for use in plain vanilla JS projects. This project is under heavy development and not yet ready for use.
+A selection of svg icons for use in plain vanilla JS projects. This isn't intended to be an exhaustive collection of icons, but only the most commonly used ones for my personal projects. More may be added as they are needed.
 
 ## Usage
 
@@ -42,7 +42,7 @@ Use the icons in your html
     <script src="main.js" module defer></script>
   </head>
   <body>
-    <icon-share-all class="icon"></icon-share-all>
+    <icon-github class="icon"></icon-github>
   </body>
 </html>
 ```
@@ -66,9 +66,9 @@ Example:
 ></icon-github>
 ```
 
-### Extending the Icons
+### Extending the Library
 
-To create a custom icon, override the `Icon` base class and pass in your svg markup into the constructor.
+To create a custom icon, override the `Icon` base class and pass your svg markup into the constructor's `super` method.
 
 ```js
 import { Icon } from '@jjohnson/icon-web-components';
@@ -92,6 +92,25 @@ import { IconCustom } from './IconCustom.js';
 
 defineCustomIcon('icon-custom', IconCustom);
 ```
+
+The icon becomes available for use in html
+
+```html
+<icon-custom></icon-custom>
+```
+
+## Available Icons
+
+| Icon                                                 | Custom Element       |
+| ---------------------------------------------------- | -------------------- |
+| <img src="./src/templates/assets/angle-down.svg" />  | `<icon-angle-down>`  |
+| <img src="./src/templates/assets/angle-up.svg" />    | `<icon-angle-up>`    |
+| <img src="./src/templates/assets/angle-left.svg" />  | `<icon-angle-left>`  |
+| <img src="./src/templates/assets/angle-right.svg" /> | `<icon-angle-right>` |
+| <img src="./src/templates/assets/bars.svg" />        | `<icon-bars>`        |
+| <img src="./src/templates/assets/close.svg" />       | `<icon-angle-close>` |
+| <img src="./src/templates/assets/github.svg" />      | `<icon-github>`      |
+| <img src="./src/templates/assets/linkedin.svg" />    | `<icon-linkedin>`    |
 
 ## Building the Library
 
