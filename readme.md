@@ -102,9 +102,22 @@ The icon becomes available for use in html
 
 ## Available Icons
 
-| Icon                                                | Custom Element      |
-| --------------------------------------------------- | ------------------- |
-| <img src="./src/templates/assets/angle-down.svg" /> | `<icon-angle-down>` |
+<style>
+  svg {
+    fill: white;
+  }
+</style>
+
+| Icon                                                 | Custom Element       |
+| ---------------------------------------------------- | -------------------- |
+| <img src="./src/templates/assets/angle-down.svg" />  | `<icon-angle-down>`  |
+| <img src="./src/templates/assets/angle-up.svg" />    | `<icon-angle-up>`    |
+| <img src="./src/templates/assets/angle-left.svg" />  | `<icon-angle-left>`  |
+| <img src="./src/templates/assets/angle-right.svg" /> | `<icon-angle-right>` |
+| <img src="./src/templates/assets/bars.svg" />        | `<icon-bars>`        |
+| <img src="./src/templates/assets/close.svg" />       | `<icon-angle-close>` |
+| <img src="./src/templates/assets/github.svg" />      | `<icon-github>`      |
+| <img src="./src/templates/assets/linkedin.svg" />    | `<icon-linkedin>`    |
 
 ## Building the Library
 
