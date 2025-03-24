@@ -1,9 +1,9 @@
 # SVG Icon Web Components
 
-<img src="https://img.shields.io/badge/version-1.0.0-blue">
-<a href="license.txt"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
+<img src="https://img.shields.io/badge/version-1.0.1-blue">
+<a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
 
-A selection of svg icons for use in plain vanilla JS projects. This project is under heavy development and not yet ready for use.
+A selection of svg icons for use in plain vanilla JS projects. This isn't intended to be an exhaustive collection of icons, but only the most commonly used ones for my personal projects. More may be added as they are needed.
 
 ## Usage
 
@@ -67,9 +67,9 @@ Example:
 ></icon-github>
 ```
 
-### Extending the Icons
+### Extending the Library
 
-To create a custom icon, override the `Icon` base class and pass in your svg markup into the constructor.
+To create a custom icon, override the `Icon` base class and pass your svg markup into the constructor's `super` method.
 
 ```js
 import { Icon } from '@jjohnson/icon-web-components';
@@ -93,6 +93,18 @@ import { IconCustom } from './IconCustom.js';
 
 defineCustomIcon('icon-custom', IconCustom);
 ```
+
+The icon becomes available for use in html
+
+```html
+<icon-custom></icon-custom>
+```
+
+## Available Icons
+
+| Icon                                                | Custom Element      |
+| --------------------------------------------------- | ------------------- |
+| <img src="./src/templates/assets/angle-down.svg" /> | `<icon-angle-down>` |
 
 ## Building the Library
 
