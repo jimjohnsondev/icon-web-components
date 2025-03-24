@@ -42,7 +42,7 @@ Use the icons in your html
     <script src="main.js" module defer></script>
   </head>
   <body>
-    <icon-share-all class="icon"></icon-share-all>
+    <icon-github class="icon"></icon-github>
   </body>
 </html>
 ```
