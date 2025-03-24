@@ -102,12 +102,6 @@ The icon becomes available for use in html
 
 ## Available Icons
 
-<style>
-  svg {
-    fill: white;
-  }
-</style>
-
 | Icon                                                 | Custom Element       |
 | ---------------------------------------------------- | -------------------- |
 | <img src="./src/templates/assets/angle-down.svg" />  | `<icon-angle-down>`  |
